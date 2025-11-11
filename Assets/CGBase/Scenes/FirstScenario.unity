@@ -466,6 +466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayButtonv3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8711b717ec6db924badce1dd6a329dad, type: 3}
+      propertyPath: m_TagString
+      value: playButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2223639932434330405, guid: 8711b717ec6db924badce1dd6a329dad, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -477,6 +481,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8711b717ec6db924badce1dd6a329dad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 720492828}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8711b717ec6db924badce1dd6a329dad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 720492833}
   m_SourcePrefab: {fileID: 100100000, guid: 8711b717ec6db924badce1dd6a329dad, type: 3}
 --- !u!1 &720492821 stripped
 GameObject:
@@ -496,6 +503,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotation
   speedRotation: 100
+--- !u!65 &720492833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720492821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.026767064, y: 0.026767062, z: 0.005353414}
+  m_Center: {x: -0.000045983117, y: 0.000033409797, z: 3.7471393e-13}
 --- !u!1 &1146014623
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +716,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9e43b27852960d74e8f87dc5a8959034, type: 3}
       propertyPath: m_Name
       value: QuitButtonv3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e43b27852960d74e8f87dc5a8959034, type: 3}
+      propertyPath: m_TagString
+      value: quitButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
