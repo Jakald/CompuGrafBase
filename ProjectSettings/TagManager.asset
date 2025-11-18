@@ -6,6 +6,7 @@ TagManager:
   tags:
   - playButton
   - quitButton
+  - opCenter
   layers:
   - Default
   - TransparentFX
