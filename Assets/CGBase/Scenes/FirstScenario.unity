@@ -346,7 +346,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c38a19eb302e44abccefa068c23ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectScene
-  SceneToLoad: OperationsCenter
 --- !u!1001 &382111462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -774,6 +773,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.28190926, y: 0.0405658, z: 0.03755113}
   m_Center: {x: -0.0009981989, y: 1.7223556e-11, z: -0.00008535945}
+--- !u!114 &1430448745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430448742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0538f9c55e418344aceb4039327e093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TargetScene
+  sceneName: OperationsCenter
 --- !u!1001 &1587174115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -852,6 +864,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9628ed09f9382854cabfc41624bb4a6e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1430448744}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9628ed09f9382854cabfc41624bb4a6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1430448745}
   m_SourcePrefab: {fileID: 100100000, guid: 9628ed09f9382854cabfc41624bb4a6e, type: 3}
 --- !u!1001 &1608825928
 PrefabInstance:
