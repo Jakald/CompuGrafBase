@@ -8,6 +8,7 @@ TagManager:
   - quitButton
   - opCenter
   - homeButton
+  - lunarDoor
   layers:
   - Default
   - TransparentFX
