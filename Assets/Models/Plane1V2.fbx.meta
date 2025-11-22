@@ -1,9 +1,49 @@
 fileFormatVersion: 2
-guid: 87edfbef1a1d03440a2ac8b41fa35224
+guid: 4066a7b8ebbe06f45a78a09880f8c39d
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Chip005_1K-JPG_Color
+    second: {fileID: 2800000, guid: 8e3cb7fafb9e2d44483753f842c589aa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Chip005_1K-JPG_Metalness
+    second: {fileID: 2800000, guid: 965578a850252474dbc943bf02d38d8f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Chip005_1K-JPG_NormalGL
+    second: {fileID: 2800000, guid: f4e1ad51a8900d0479b2f7f821ae67aa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Chip005_1K-JPG_Roughness
+    second: {fileID: 2800000, guid: afc87dae1fa79eb4eacfd70bd4a71565, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fabric004_1K-JPG_Color
+    second: {fileID: 2800000, guid: 1ee1d696ee6351547a8b7dac5afd25c3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fabric004_1K-JPG_Metalness
+    second: {fileID: 2800000, guid: 1998d6a173a4f724a8ee91b54367e694, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fabric004_1K-JPG_NormalGL
+    second: {fileID: 2800000, guid: 5122b6f8cc61dbf488eaea35a89b5790, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fabric004_1K-JPG_Roughness
+    second: {fileID: 2800000, guid: c2d43f98065419b4781ea6e75fa01b25, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -33,7 +73,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 20
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -91,7 +131,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.19999999
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
