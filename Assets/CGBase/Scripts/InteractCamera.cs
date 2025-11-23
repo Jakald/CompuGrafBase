@@ -7,23 +7,31 @@ public class InteractCamera : MonoBehaviour
 
     private Camera camaraActual;
     public int wichButton = 0;
+    public Camera camaraPrincipal;
 
 
     void Start()
     {
         camaraActual = GetComponent<Camera>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Si se quiere salir de la nave, presionamos ESC
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TransitionManager.Instance.DoTransition(() => outPlane());
+
+        }
+
         if (Input.GetMouseButtonDown(wichButton))
         {
             Ray rayo = camaraActual.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(rayo,out hit))
+            if (Physics.Raycast(rayo, out hit))
             {
                 // ¿Se cambia de escena?
                 TargetScene target = hit.collider.GetComponent<TargetScene>();
@@ -32,8 +40,11 @@ public class InteractCamera : MonoBehaviour
                     string invoque = target.sceneName;
                     if (!string.IsNullOrEmpty(invoque))
                     {
-                        Debug.Log("Cargando Escena" + invoque);
-                        SceneManager.LoadScene(invoque);
+                        TransitionManager.Instance.DoTransition(() =>
+                        {
+                            Debug.Log("Cargando Escena" + invoque);
+                            SceneManager.LoadScene(invoque);
+                        });
                     }
                 }
 
@@ -52,8 +63,11 @@ public class InteractCamera : MonoBehaviour
 
                 if (cameraDetected != null)
                 {
-                    Debug.Log("Cambiando a Camara de nave");
-                    changeCamera(cameraDetected.planeCamera);
+                    TransitionManager.Instance.DoTransition(() =>
+                    {
+                        Debug.Log("Cambiando a Camara de nave");
+                        changeCamera(cameraDetected.planeCamera);
+                    });
                     return;
                 }
 
@@ -89,9 +103,37 @@ public class InteractCamera : MonoBehaviour
                 Debug.LogError("No se encontró Script");
             }
 
-                //Apagamos la camara principal
-                gameObject.SetActive(false);
+            //Apagamos la camara principal
+            gameObject.SetActive(false);
         }
 
+    }
+
+    void outPlane()
+    {
+        if (camaraPrincipal != null)
+        {
+
+            PlaneMove motor = GetComponentInParent<PlaneMove>();
+            if (motor != null)
+            {
+                motor.ResetPosition();
+
+
+                motor.enabled = false;
+
+                //Mostramos cursor de nuevo
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+
+                //Encendemos camara principal
+                camaraPrincipal.gameObject.SetActive(true);
+
+                //apagamos la camara de la nave
+                gameObject.SetActive(false);
+
+                Debug.Log("Regresa a Camara principal");
+            }
+        }
     }
 }

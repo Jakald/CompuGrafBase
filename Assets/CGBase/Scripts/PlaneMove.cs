@@ -10,7 +10,18 @@ public class PlaneMove : MonoBehaviour
     public float velocidadRoll = 150f;     // Para rotar sobre sí misma (Teclas A/D)
 
     [Header("Ajustes")]
-    public bool invertirMouseY = true;     // true = "Estilo Avión" (Mouse abajo sube la nariz)
+    public bool invertirMouseY = false;     // true = "Estilo Avión" (Mouse abajo sube la nariz)
+
+    //Guardamos la posición de la nave
+    private Vector3 initialPos;
+    private Quaternion initialRot;
+
+    void OnEnable()
+    {
+        //Guarda posicion
+        initialPos = transform.position;
+        initialRot = transform.rotation;
+    }
 
     void Start()
     {
@@ -58,6 +69,12 @@ public class PlaneMove : MonoBehaviour
 
         // Opcional: Estabilizar el eje Z (Roll) automáticamente si sueltas las teclas
         // (Por ahora desactivado para que tengas libertad total de giro)
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = initialPos;
+        transform.rotation = initialRot;
     }
 
     // Desbloquear mouse con Escape por si necesitas salir
