@@ -606,6 +606,10 @@ PrefabInstance:
       value: PlayButtonv3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8711b717ec6db924badce1dd6a329dad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8711b717ec6db924badce1dd6a329dad, type: 3}
       propertyPath: m_TagString
       value: playButton
       objectReference: {fileID: 0}
@@ -868,7 +872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9628ed09f9382854cabfc41624bb4a6e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.87
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9628ed09f9382854cabfc41624bb4a6e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -876,7 +880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9628ed09f9382854cabfc41624bb4a6e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.91
+      value: 18.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9628ed09f9382854cabfc41624bb4a6e, type: 3}
       propertyPath: m_LocalRotation.w
